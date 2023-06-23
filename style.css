@@ -1,0 +1,97 @@
+/* BASE STYLES */
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: "Roboto", sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    border: 10px solid var(--clr-dark);
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: #fb7185;
+    padding: 1em;
+    font-weight: 700;
+    color: var(--clr-light);
+    text-align: center;
+    border: 10px solid var(--clr-accent);
+    border-radius: 10px;
+}
+
+/* END OF BASE STYLES */
+
+/* FLEXBOX STYLES */
+.container {        
+    /* Display our elements in the main axis (elements will be next to each other) / By default the main axis is horizontal */
+    display: flex;  
+
+    /* Change the main axis to vertical */
+    /* flex-direction: row;  */
+
+    /* Align items on the main axis by default its flex-start */
+    /* justify-content: space-evenly;  */
+
+    /* Align items on the cross axis */
+    /* align-items: center; */
+
+    /* When we add multiple items to the container the elements will crash by adding the wrap property new items will go to the next line when there is no more space left */
+    /* flex-wrap: wrap; */
+
+    /* Align content property only works when flex-wrap is set to wrap, position the items based on the cross axis */
+    /* align-content: space-evenly; */
+
+    /* We can add gaps */
+    /* gap: 1em; */
+}
+
+.item-3 {
+    /* Grow the element to fill the remaining space */
+    /* flex-grow: 1;  */
+
+    /* Shrink the element to fit the content */
+    /* Defines how fast one item shrinks in comparison to the others */
+    /* flex-shrink: 2; */
+
+    /* Flex basis define the width of the element (it overrides the width of the element) */
+    /* flex-basis: 300px; */
+
+    /* Shrinking the item to the max */
+    /* flex-basis: 0;   */
+
+    /* Flex (shorthand) */
+    /* flex: 1; */
+
+    /* Align self based on the cross axis */
+    /* align-self: flex-end; */
+
+    /* By default our items are ordered based on the HTML */
+    order: -1;
+}
+
+/* END OF FLEXBOX STYLES */
